@@ -1,0 +1,217 @@
+
+.host-layout .host-reviews {
+    padding: 1rem;
+}
+
+
+.host-reviews .title {
+    letter-spacing: 1.1px;
+    padding: 0.5rem 0 1rem;
+}
+
+.host-reviews .overall-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.overall-box .overall {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.overall-box .review-star {
+    transform: scale(1.3);
+}
+
+.overall-box .pseudohint {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.host-reviews .metric-box {
+    max-width: 525px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem;
+
+}
+
+.metric-box .metric-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.metric-group .rate,
+.metric-group .percentage {
+    color: var(--hostReviewsMetricText);
+    font-weight: 500;
+}
+
+.metric-group .rate {
+    flex: 15;
+}
+
+/* there's also the meter fill styled in JSX */
+.metric-group .meter {
+    position: relative;
+    flex: 45;
+    height: 0.5rem;
+    border-radius: 15px;
+    background-color: var(--hostReviewsMetricBg);
+}
+
+.metric-group .percentage {
+    flex: 15;
+    text-align: right;
+}
+
+.host-reviews .total-reviews {
+    margin: 0 0 0.5rem;
+    letter-spacing: 1.1px;
+    font-size: 22px;
+}
+
+.host-reviews .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+}
+
+.reviews-grid .review {
+    display: flex;
+    flex-direction: column;
+}
+
+.review .author-date-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0 0.75rem;
+    font-weight: 600;
+}
+
+.review .stars {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.author-date-box .author {
+    word-break: break-word;
+} 
+
+.author-date-box .date {
+    color: var(--hostReviewsDate);
+}
+
+.review a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.review a:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.review .van-name {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 18px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.review .text {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.review .separator {
+    width: 95%;
+    height: 2px;
+    margin: 18px auto;
+    background-color: var(--hostReviewsSeparator);
+}
+
+
+@media screen and (min-width:400px) {
+    
+    .host-reviews .title {
+        font-size: 28px;
+    }
+
+    .overall-box .pseudohint {
+        font-size: 20px;
+    }
+
+    .metric-group .rate,
+    .metric-group .percentage {
+        font-size: 18px;
+    }
+
+    .metric-group .meter {
+        height: 0.6rem;
+
+    }
+
+    .host-reviews .total-reviews {
+        margin: 0 0 0.5rem;
+        letter-spacing: 1.1px;
+        font-size: 25px;
+    }
+
+    .review .author-date-box {
+        font-size: 19px;
+    }
+
+    .review .van-name {
+        font-size: 19px;
+    }
+
+    .review .text {
+        font-size: 18px;
+    }
+    
+}
+
+
+@media screen and (min-width:600px) {
+    
+    .metric-group .rate,
+    .metric-group .percentage {
+        font-size: 20px;
+    }
+
+    .metric-group .meter {
+        height: 0.75rem;
+    }
+
+    .review .author-date-box {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .author-date-box .author {
+        max-width: 340px;
+    } 
+
+    .review .stars {
+        gap: 0.5rem;
+        margin-left: 0.25rem;
+    }
+
+    .review .review-star {
+        transform: scale(1.25);
+    }
+
+    .review .van-name {
+        font-size: 20px;
+    }
+
+    .review .text {
+        font-size: 20px;
+    }
+
+}

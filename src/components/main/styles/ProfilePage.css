@@ -1,0 +1,307 @@
+
+main .user-page {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: var(--userPageText);
+    background-color: var(--bg);
+    text-align: justify;
+}
+
+.user-page .username {
+    margin: 6px 0;
+    font-size: 24px;
+    text-align: center;
+    word-break: break-word;
+}
+
+
+/* DON'T CONCRETISIZE elements between the comment lines */
+/* they are common not ALL located inside <Form />s in JSX */
+
+
+.user-page .user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0.5rem 0;
+}
+
+.user-form input[type=text],
+.user-form input[type=password] {
+    padding: 14px 8px;
+    background-color: var(--ProfileFormInputBg);
+    border: 1px solid var(--ProfileFormBorder);
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.user-form button {
+    max-width: 380px;
+    padding: 12px 8px;
+    border: none;
+    border-radius: 8px;
+    color: var(--btnProfileAction);
+    background-color: var(--btnProfileActionBg);
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.user-form button:hover {
+    background-color: var(--btnProfileActionBgHover);
+    cursor: pointer;
+}
+
+.user-form button:active {
+    transform: scale(0.98);
+}
+
+.user-form button:disabled {
+    background-color: var(--btnProfileActionBgDisabled);
+}
+
+.user-page .form-separator {
+    margin: 0 auto;
+    max-width: 70%;
+    padding: 12px;
+}
+
+
+.user-form .form-title {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 6px 0;
+}
+
+.user-page .form-message,
+.user-page .message-placeholder  {
+    max-width: 300px;
+    margin: 0.8rem auto;
+    line-height: 1.5rem;
+    font-size: 18px;
+    word-break: break-word; /* if the text message is too long, break it by words */
+    text-align: center;
+
+}
+
+@keyframes manifest {
+
+    0%, 100% {
+        opacity: 0;
+    }
+
+    15%, 50%, 85% {
+      opacity: 1;
+    }
+    
+}
+
+.user-page .form-message {
+    opacity:0;
+    animation: manifest 8s linear forwards;
+}
+
+.user-page .message-placeholder {
+    visibility: hidden;
+}
+
+/* DON'T CONCRETISIZE elements between the comment lines */
+/* they are common not ALL located inside <Form />s in JSX */
+
+
+/* avatar-updating form overrides the user-form class  */
+.user-page .image-form {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 8px;
+}
+
+.image-form .avatar {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-bottom: 0.2rem;
+    border: 0.2rem inset var(--userAvatarBorder);
+    border-radius: 8px;
+    transition: opacity 0.333s;
+}
+
+.image-form .avatar:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.image-form .false-file-uploader {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.false-file-uploader .false-input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 12px;
+    color: var(--btnProfileAction);
+    background-color: var(--falseSelectFileBg);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.false-file-uploader .false-input:hover {
+    cursor: pointer;
+    background-color: var(--falseSelectFileBgHover);
+}
+
+.false-file-uploader .false-input:active {
+    transform: scale(0.98);
+}
+
+.false-file-uploader .false-filename {
+    padding: 6px 0;
+    word-break: break-word;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.image-form .btn-submit {
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.user-page .data-form {}
+
+.data-form .button-box {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.button-box button {
+    padding: 12px 18px;
+    font-weight: 600;
+}
+
+.button-box .btn-submit {
+    padding: 12px 32px;
+}
+
+.button-box .btn-reset {
+    background-color: var(--ProfileDataResetBg);
+}
+
+.button-box .btn-reset:hover {
+    background-color: var(--ProfileDataResetHoverBg);
+}
+
+.password-form .show-pw-box {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0;
+    gap: 0.5rem;
+    font-size: 18px;
+}
+
+.show-pw-box #pw-show-box {
+    margin: 0 4px;
+    width: 16px;
+    height: 16px;
+}
+
+@media screen and (min-width:400px) {
+
+    .user-page .user-form {
+        align-items: center;
+        gap: 4px;
+    }
+
+    .user-form input[type=text],
+    .user-form input[type=password] {
+        width: 80%;
+        max-width: 500px;
+    }
+
+
+    .user-page .image-form {
+        justify-content: center;
+    }
+
+    .image-form .false-file-uploader {
+        flex-direction: row;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+
+    .false-file-uploader .false-input {
+        width: initial;
+        padding: 16px 8px;
+    }
+
+
+    .button-box button {
+        font-size: 18px;
+    }
+
+    .button-box .btn-submit {
+        width: 170px;
+    }
+    
+    .button-box .btn-reset {
+        width: 110px;
+    }
+
+
+
+    .password-form .btn-submit {
+        width: 70%;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+
+    .user-form .form-title {
+        font-size: 19px;
+    }
+
+    .user-form input[type=text],
+    .user-form input[type=password] {
+        padding: 18px 12px;
+        font-size: 19px;
+    }
+
+
+    .user-page .image-form {
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        row-gap: 24px;
+        column-gap: 18px;
+    }
+
+    .image-form .message-placeholder,
+    .image-form .form-message {
+        grid-row: 2 / span 2;
+        max-width: 250px;
+        align-self: flex-start;
+    }
+
+    .image-form .false-file-uploader {
+        width: 250px;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+
+}

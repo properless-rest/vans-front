@@ -1,0 +1,151 @@
+
+
+main .auth-page {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.75rem 0;
+    gap: 0.75rem;
+    color: var(--authPagesText);
+    background-color: var(--bg);
+}
+
+.auth-page .title {
+    padding: 0 0.75rem;
+    font-size: 30px;
+    text-align: center;
+}
+
+.auth-page .err {
+    animation: manifest 8s linear forwards;
+}
+
+@keyframes manifest {
+
+    0%, 100% {
+        opacity: 0;
+    }
+
+    15%, 50%, 85% {
+      opacity: 1;
+    }
+    
+}
+
+.auth-page .err-placeholder  {
+    visibility: hidden;
+}
+
+.auth-page .auth-form {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form input {
+    padding: 0.5rem;
+    font-size: 20px;
+    border: 1px solid var(--authFormBorder);
+    background-color: var(--authFormInputBg);
+}
+
+
+.auth-form input::placeholder {
+    color: var(--authFormPlaceholders);
+    font-style: oblique;
+}
+
+.auth-form input:first-of-type {
+    border-radius: 6px 6px 0 0;
+}
+
+.auth-form input:last-of-type {
+    border-radius: 0 0 6px 6px;
+}
+
+.auth-form input.wrong-input {
+    border-color: red;
+}
+
+.auth-form .btn-submit {
+    margin-top: 1.2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    color: var(--btnAuthIn);
+    background-color: var(--btnAuthInBg);
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.auth-form .btn-submit:hover {
+    cursor: pointer;
+    background-color: var(--btnAuthInBgHover);
+}
+
+.auth-form .btn-submit:active {
+    transform: scale(0.98);
+}
+
+.auth-form .btn-submit:disabled {
+    background-color: var(--btnAuthInBgDisabled);
+    transform: initial;
+}
+
+.auth-page .log-or-sign {
+    max-width: 325px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.auth-page .log-or-sign a {
+    color: var(--logOrSignLink);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.auth-page .log-or-sign a:hover {
+    cursor: pointer;
+    color: var(--logOrSignLinkHover);
+}
+
+.auth-page .log-or-sign a:active {
+    color: var(--logOrSignLinkActive);
+}
+
+.auth-page .log-or-sign a:visited {
+    color: var(--logOrSignLinkVisited);
+} 
+
+
+@media screen and (min-width:600px) {
+    
+    .auth-page .title {
+        font-size: 32px;
+    }
+
+    .auth-page .auth-form {
+        max-width: 490px;
+    }
+
+    .auth-form input {
+        padding: 0.75rem;
+        font-size: 21px;
+    }
+
+    .auth-form .btn-submit {
+        margin-top: 1.5rem;
+        font-size: 20px;
+        font-weight: 800;
+    }
+    
+    .auth-page .log-or-sign {
+        max-width: initial;
+        font-weight: 700;
+        font-size: 21px;
+    }
+
+}

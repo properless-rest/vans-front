@@ -1,0 +1,104 @@
+
+
+main .home-page {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+    background-image: url("/homepage-main.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top; 
+}
+
+.home-page .title {
+    max-width: 500px;
+    margin: 30px auto 45px;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 42px;
+    text-shadow: 0 0 .1em #101010;
+    color: var(--homePageText);
+}
+
+.home-page p {
+    max-width: 480px;
+    margin: 0 auto;
+    color: var(--homePageText);
+    text-shadow: 0 0 10px #000;
+    margin-bottom: 2em;
+    font-weight: 500;
+}
+
+.home-page .btn-find-van {
+    padding: .8em 5em;
+    border: none;
+    border-radius: 5px;
+    color: var(--homePageText);
+    background-color: var(--homePageBtn);
+    align-self: center;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.home-page .btn-find-van:hover {
+    cursor: pointer;
+    background-color: var(--homePageBtnHover);
+}
+
+.home-page .btn-find-van:active {
+    transform: scale(0.98);
+}
+
+.btn-find-van .btn-find-van-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 600px) {
+
+    .home-page .title {
+        max-width: 500px;
+        margin: 10px auto 20px;
+        font-size: 38px;
+    }
+
+    .home-page p {
+        max-width: 520px;
+        margin: 2em auto;
+        font-size: 18px;
+    }
+
+    .home-page .btn-find-van {
+        padding: 1em 6em;
+        font-size: 1.05em;
+    }
+
+}
+
+
+@media screen and (min-height: 920px) {
+
+
+    main .home-page {
+        margin: auto 0;
+        background-position: top;
+    }
+
+    .home-page .btn-find-van {
+        padding: 1em 6em;
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-height: 1100px) {
+
+    main .home-page {
+        background-position: bottom;
+    }
+
+}

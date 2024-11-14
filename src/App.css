@@ -1,0 +1,247 @@
+
+.page-layout {
+  max-width: var(--appWidth);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  background-color: var(--bg);
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 16px;
+  background-color: var(--bg);
+}
+
+/* <Link /> around the .header-logo */
+header > a {
+  text-decoration: none;
+}
+
+header .header-logo {
+  color: var(--headerLogo);
+  font-size: 28px;
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+nav .navlink-div {
+  position: fixed; /* fixed position blocks long pages (with y-overflow) entirely */
+  top: -100%; /* initially invisible */
+  left: 0;
+  height: 100svh;
+  width: 100vw;
+  /* display: comes from Header.jsx; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: rgba(0, 0, 0, 0.95);
+  animation: slideDown 1s ease 1 forwards;
+  z-index: 3;
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+.navlink-div .close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.16em 0.42em;
+  color: var(--navLinkPop);
+  font-size: 3em;
+  transition: color 0.2s;
+}
+
+.navlink-div .close-menu:hover {
+  cursor: pointer;
+  color: var(--navLinkPopHover);
+}
+
+/* Represents NavLinks */ 
+.navlink-div a {
+  font-weight: 600;
+  color: var(--navLinkPop);
+  text-decoration: none;
+  font-size: 3rem;
+  transition: color 0.2s; 
+}
+
+.navlink-div a:hover {
+  cursor: pointer;
+  color: var(--navLinkPopHover);
+}
+
+/* class .active comes from the React-Router <NavLink/> default code */
+.navlink-div a.active {
+  color: var(--navLinkPopHover);
+}
+
+.navlink-div .logged-pic {
+  display: none;
+}
+
+.navlink-div .div-logged-links {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+nav .hamburger-menu {
+  width: 2.5rem;
+}
+
+nav .hamburger-menu:hover {
+  cursor: pointer;
+}
+
+
+
+/* main must be only flex:1 and flex; */
+/* specific components of main are configured individually */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: var(--appWidth);
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+  background-color: var(--footerBg);
+}
+
+footer .footer-text {
+  color: var(--footer);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+@media screen and (min-width: 400px) {
+
+  .navlink-div a {
+    font-size: 3.5rem;
+  }
+
+}
+
+
+@media screen and (min-width: 600px) {
+
+  header {
+    position: relative;  /* required for logged-in pop-up menu to work */
+    padding: 26px 24px;
+  }
+
+  nav .navlink-div {
+    position: static;
+    top: initial;
+    left: initial;
+    height: initial;
+    width: initial;
+    /* display: comes from Header.jsx; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: inherit;
+    animation: none;
+  }
+
+  .navlink-div .close-menu {
+    display: none;
+  }
+
+  .navlink-div a {
+    font-weight: 600;
+    color: var(--navLink);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.2s; 
+  }
+
+  .navlink-div a:hover {
+    color: var(--navLinkHover);
+  }
+
+  /* class .active comes from the React-Router <NavLink/> default code */
+  .navlink-div a.active {
+    color: var(--navLinkHover);
+  }
+
+  .navlink-div .logged-pic {
+    display: initial;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    background-color: white;
+    border-radius: 45%;
+    border: 2px solid #161616;
+    transition: opacity 0.2s;
+    /* image is not draggable */
+    user-drag: none;    
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* image is not draggable */
+  }
+
+  .navlink-div .logged-pic:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }  
+
+  .navlink-div .div-logged-links {
+    position: absolute;
+    top: 94px;
+    right: 0;
+    align-items: flex-start;
+    padding: 0.75rem;
+    border-bottom: 2px outset var(--navLink);
+    border-bottom: 2px outset var(--navLink);
+    border-left: 2px outset var(--navLink);
+    border-radius: 0 0 0 5px;
+    background-color: var(--bg);
+    z-index: 2;
+  }
+
+  
+  nav .hamburger-menu {
+    display: none;
+  }
+
+
+
+  footer .footer-text {
+    color: var(--footer);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+  }
+
+}

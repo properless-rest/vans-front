@@ -1,0 +1,188 @@
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --appWidth: 800px;
+
+  --bodyBg: #202020;
+  --bg: #F7F7ED;
+  --headerLogo: #000;
+  --navLink: #4D4D4D;
+  --navLinkHover: #FF8C38;  
+  --navLinkPop: #5D5D5D;
+  --navLinkPopHover: #9D9D9D;
+  --footerBg: #252525;
+  --footer: #AAAAAA;
+
+  --homePageText: #FFF;
+  --homePageBtn: #FF8C38;
+  --homePageBtnHover: #EE7F30;
+
+  --aboutPageText: #161616;
+  --aboutPageVansBoxBg: #FFCC8D;
+
+  --vansPageText: #161616;
+  --btnFilterDefBg: #FFEAD0;
+  --btnFilterDefBgHover: #EECDA0;
+  --vanSelectedText: #FFEAD0;
+  --vanBgSimple: #E17654;
+  --vanBgRugged: #115E59;
+  --vanBgLuxury: #161616;
+
+  --vanPageText: #161616;
+  --backToAllVans: #201F1D;
+  --btnRentText: #F5F5F5;
+  --btnRentBg: #FF8C38;
+  --btnRentBgHover: #EE7F30;
+
+  --bgTransparent: rgba(247, 247, 237, 0.75);
+  --makeTrxAction: #FFF;
+  --makeTrxActionBg: #FF8C38;
+  --makeTrxActionBgHover: #EE7F30;
+  --makeTrxActionBgDisabled: #5D5D5D;
+  --makeTrxFormInputBg: #FCFCFC;
+  --makeTrxFormBorder: #D1D5DB;
+  --makeTrxSwitcherBgHover: #EECDA0;
+  --makeTrxAction: #FFF;
+  --makeTrxTransactBg: #d14c4c;
+  --makeTrxTransactBgHover: #b14141;
+  --makeTrxUndoBg: #FF8C38;
+  --makeTrxUndoBgHover: #EE7F30;
+
+  --makeReviewFormInputBg: #FCFCFC;
+  --makeReviewFormBorder: #D1D5DB;
+  --makeReviewAction: #FFF;
+  --makeReviewActionBg: #FF8C38;
+  --makeReviewActionBgHover: #EE7F30;
+  --makeReviewActionBgDisabled: #5D5D5D;
+
+  --authPagesText: #161616;
+  --authFormInputBg: #FCFCFC;
+  --authFormBorder: #D1D5DB;
+  --authFormPlaceholders: #4D4D4D;
+  --btnAuthIn: #FFF;
+  --btnAuthInBg: #FF8C38;
+  --btnAuthInBgHover: #EE7F30;
+  --btnAuthInBgDisabled: #5D5D5D;
+  --logOrSignLink: #FF8C38;
+  --logOrSignLinkHover: #EE7F30;
+  --logOrSignLinkActive: #E32019;
+  --logOrSignLinkVisited: #EE7F30;
+
+  --falseSelectFileBg:#E17654;        /* used in ProfilePage, VanEditPage */
+  --falseSelectFileBgHover:#e55e35;   /* used in ProfilePage, VanEditPage */
+
+  --userPageText: #161616;
+  --userAvatarBorder: #161616;
+  --btnProfileAction: #FFF;
+  --btnProfileActionBg: #FF8C38;
+  --btnProfileActionBgHover: #EE7F30;
+  --btnProfileActionBgDisabled: #5D5D5D;
+  --ProfileFormInputBg: #FCFCFC;
+  --ProfileFormBorder: #D1D5DB;
+  --ProfileDataResetBg: #d14c4c;
+  --ProfileDataResetHoverBg: #b14141;
+
+  --hostPagesLoader: #5D5D5D;
+  --hostPagesNavLink: #4D4D4D;
+  --hostPagesText: #161616;
+
+  --hostDashboardStripe1: #FFEAD0;
+  --hostDashboardStripe2: #FFDDB2;
+
+  --hostIncomeTrxBg: #fff;
+  --hostIncomeTrxShadow: #201F1D;
+
+  --hostVansBoxBg: #FEFEFE;
+  --hostVansPrice: #4D4D4D;
+  --hostVansEditHover: #115E59;
+
+  --hostVanReturnLink: #201F1D;
+  --hostVanCardBg: #FEFEFE;
+  --hostVanNavLink: #4D4D4D;
+  --hostVanNavLinkActive: #161616;
+
+  --btnAddVanAction: #FFF;
+  --btnAddVanActionBg: #FF8C38;
+  --btnAddVanActionBgHover: #EE7F30;
+  --btnAddVanActionBgDisabled: #5D5D5D;
+  --AddVanFormInputBg: #FCFCFC;
+  --AddVanFormBorder: #D1D5DB;
+
+  --btnVanEditAction: #FFF;
+  --btnVanEditActionBg: #FF8C38;
+  --btnVanEditActionBgHover: #EE7F30;
+  --btnVanEditActionBgDisabled: #5D5D5D;
+  --VanEditFormInputBg: #FCFCFC;
+  --VanEditFormBorder: #D1D5DB;
+  --VanEditDataResetBg: #d14c4c;
+  --VanEditDataResetHoverBg: #b14141;
+
+  --btnVanDeleteAction: #FFF;
+  --btnVanDeleteBg: #d14c4c;
+  --btnVanDeleteBgHover: #b14141;
+  --btnVanDeleteBgDisabled: #5D5D5D;
+  --VanDeleteUndoBg: #FF8C38;
+  --VanDeleteUndoBgHover: #EE7F30;
+
+  --hostReviewsMetricText: #4D4D4D;
+  --hostReviewsMetricBg: #B9B9B9;
+  --hostReviewsMetricFill: #FF8C38;
+  --hostReviewsDate: #8C8C8C;
+  --hostReviewsSeparator: #C7C7C7;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bodyBg);
+}
+
+button {
+  color: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+a {
+  /* make links undraggable, because they expose Routes when dragged */
+  /* the code was copied, I dunno how it works :D */
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* is used in Vans, Van and hostVan pages */
+
+.van-Simple {
+  background-color: var(--vanBgSimple);
+}
+
+.van-Rugged {
+  background-color: var(--vanBgRugged);
+}
+
+.van-Luxury {
+  background-color: var(--vanBgLuxury);
+}

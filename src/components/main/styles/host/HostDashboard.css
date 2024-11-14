@@ -1,0 +1,242 @@
+
+.host-layout .host-dashboard {
+    display: grid;
+    grid-template-columns: 1;
+}
+
+.host-dashboard .div-greet-income {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 1.5rem 1.2rem;
+    background-color: var(--hostDashboardStripe1);
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.div-greet-income .greet {
+    font-size: 28px;
+    margin-bottom: 1rem;
+}
+
+.div-greet-income .total {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+.div-greet-income .div-income {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-income .income {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.div-income a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.div-income a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+.host-dashboard .div-reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.2rem;
+    background-color: var(--hostDashboardStripe2);
+}
+
+.div-reviews .box-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.box-rating .avg {
+    margin-right: 0.25rem;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.box-rating .rating {
+    font-weight: 600;
+}
+
+.div-reviews a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.div-reviews a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+
+.host-dashboard .div-myvans {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 1.2rem;
+}
+
+.div-myvans .box-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-title .mpv {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.box-title a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.box-title a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+
+.div-myvans .myvans-grid {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 15px;
+    padding: 0.5rem 0 0.75rem;
+}
+
+@media screen and (min-width: 380px) {
+    
+    .div-greet-income .greet {
+        font-size: 30px;
+    }
+
+    .div-greet-income .total {
+        font-size: 18px;
+    }
+
+    .div-income a {
+        font-size: 20px;
+    }
+
+    .box-rating .avg {
+        margin-right: 0.5rem;
+        font-size: 21px;
+    }
+
+    .box-rating .rating {
+        font-size: 20px;
+    }
+
+    .div-reviews a {
+        font-size: 20px;
+    }
+
+    .box-title .mpv {
+        font-size: 22px;
+    }
+    
+    .box-title a {
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 600px) {
+
+    .host-layout .host-dashboard {
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 2;
+    }
+
+    .host-dashboard .div-greet-income {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .div-greet-income .greet {
+        font-size: 28px;
+        margin-bottom: 1rem;
+    }
+
+    .host-dashboard .div-reviews {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .host-dashboard .div-myvans {
+        grid-row-start: 2;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .div-greet-income .greet {
+        margin-bottom: 0.5rem;
+    }
+    
+    .div-greet-income .div-income {
+        max-width: 475px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .div-income a {
+        align-self: flex-end;
+    }
+
+    .host-dashboard .div-reviews {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div-reviews .box-rating {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .div-reviews a {
+        position: absolute;  /* sticks to the bottom; align-self does NOT help with it */
+        bottom: 10px;
+        right: 20px;
+    }
+
+}
+
+@media screen and (min-width:620px) {
+    
+    .div-myvans .myvans-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  /* auto does not work */
+        gap: 20px;
+    }
+
+}

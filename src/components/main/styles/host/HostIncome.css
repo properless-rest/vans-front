@@ -1,0 +1,135 @@
+
+.host-layout .host-income {
+    padding: 1rem;
+}
+
+.host-income .title {
+    letter-spacing: 1.1px;
+}
+
+.host-income .period-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 0 1.25rem;
+    font-size: 17px;
+    /* font-weight is dynamically set on selection in JSX */
+}
+
+.period-box .option:hover {
+    cursor: pointer;
+}
+
+.host-income .total {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+}
+
+.host-income .chart-box {
+    overflow: hidden; /* NOTE: DO NOT! DELETE THIS. Selected bars display hints with huge overflow on mobile rotation */
+    margin: 1rem 0;
+}
+
+.host-income .num-transactions {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.host-income .transactions-grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.transactions-grid .transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem;
+    padding: 0.75rem 0.5rem;
+    border-radius: 8px;
+    background-color: var(--hostIncomeTrxBg);
+    box-shadow: 0.1rem 0.15rem var(--hostIncomeTrxShadow);
+    word-break: break-word;
+    transition: transform 0.2s;
+}
+
+.transactions-grid .transaction:hover {
+    transform: scale(1.02);
+}
+
+.transaction .trx-block {
+    display: flex;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.transaction .block-name {
+    display: none;
+    gap: 0.2rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+
+@media screen and (min-width: 400px) {
+
+    .host-income .title {
+        font-size: 30px;
+    }
+
+    .host-income .period-box {
+        justify-content: flex-start;
+        gap: 1rem;
+        font-size: 20px;
+        /* font-weight is dynamically set on selection in JSX */
+    }
+
+    .host-income .total {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1.1px;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+
+    .host-income .period-box {
+        margin: 1rem 0 1.5rem;
+        font-size: 22px;
+        /* font-weight is dynamically set on selection in JSX */
+    }
+
+    .host-income .total {
+        font-size: 24px;
+    }
+
+    .host-income .num-transactions {
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .host-income .transactions-grid {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .transactions-grid .transaction {
+        gap: 1rem;
+    }
+    
+    .transaction .trx-block {
+        flex: 25;
+    }
+
+    .transaction .block-name {
+        flex: 50;
+        display: flex;
+    }
+    
+    
+}

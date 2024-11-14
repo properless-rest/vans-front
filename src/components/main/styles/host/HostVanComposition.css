@@ -1,0 +1,251 @@
+
+
+.host-layout .host-van-layout {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.host-van-layout .host-vans-return {
+    margin: 12px 27px 4px;
+    color: var(--hostVanReturnLink);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.host-van-layout .host-van-card {
+    margin: 18px;
+    padding: 16px;
+    border-radius: 15px;
+    background-color: var(--hostVanCardBg);
+}
+
+.host-van-card .van-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.van-content img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.van-content .div-van-info {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2px;
+    word-break: break-word;
+}
+
+.div-van-info .van-type {
+    padding: 0.35rem 1rem;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--vanSelectedText);
+}
+
+.div-van-info .van-name {
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 700;
+} 
+
+.div-van-info .van-price {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.host-van-card .host-van-nav {
+    display: flex;
+    margin: 27px 0;
+    gap: 21px;
+    
+}
+
+.host-van-nav a {
+    color: var(--hostVanNavLink);
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* active class is comes from React-Router's NavLink feature */
+.host-van-nav a.active {
+    color: var(--hostVanNavLinkActive);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+/* component HostVanDetails */
+
+.host-van-layout .host-van-details {
+    overflow-x: hidden;
+
+}
+
+.host-van-details p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+
+/* component HostVanPricing */
+
+.host-van-layout .host-van-pricing {
+    font-size: 24px;
+}
+
+/* component HostVanImages */
+
+.host-van-layout .host-van-images-grid {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.host-van-images-grid img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 2px outset #212121;
+    border-radius: 10px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.host-van-images-grid img:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    opacity: 0.85;
+}
+
+
+@media screen and (min-width:400px) {
+    
+    .host-van-layout .host-vans-return {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .host-van-card .van-content {
+        gap: 20px;
+    }
+
+    .van-content img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .van-content .div-van-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .div-van-info .van-type {
+        padding: 0.5rem 1.5rem;
+        font-size: 18px;
+    }
+
+    .div-van-info .van-name {
+        line-height: 34px;
+        font-size: 28px;
+    } 
+
+    .div-van-info .van-price {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .host-van-card .host-van-nav {
+        display: flex;
+        margin: 27px 0;
+        gap: 21px;
+    }
+   
+    .host-van-nav a {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    /* */
+    
+    .host-van-details p {
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    /* */
+
+    .host-van-layout .host-van-images-grid {
+        grid-template-columns: repeat(2, auto);
+    }
+
+}
+
+
+@media screen and (min-width: 600px) {
+    
+    .host-van-layout .host-vans-return {
+        font-size: 21px;
+    }
+
+    .host-van-card .van-content {
+        gap: 30px;
+    }
+
+    .van-content img {
+        width: 225px;
+        height: 225px;
+    }
+
+    .van-content .div-van-info {
+        gap: 12px;
+    }
+
+    .div-van-info .van-type {
+        padding: 0.75rem 1.75rem;
+        font-size: 18px;
+    }
+
+    .div-van-info .van-name {
+        line-height: 38px;
+        font-size: 32px;
+    } 
+
+    .div-van-info .van-price {
+        font-size: 24px;
+    }
+
+    .host-van-nav a {
+        font-size: 22px;
+    }
+
+    /* */
+    
+    .host-van-details p {
+        font-size: 21px;
+        font-weight: 500;
+    }
+
+    /* */
+
+    .host-van-layout .host-van-images-grid {
+        grid-template-columns: repeat(3, auto);
+
+    }
+
+}

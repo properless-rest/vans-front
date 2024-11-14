@@ -1,0 +1,122 @@
+
+
+main .van-view {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.25rem;
+    background-color: var(--bg);
+    color: var(--vanPageText);
+}
+
+.van-view .vans-link {
+    color: var(--backToAllVans);
+    font-weight: 500;
+}
+
+.van-view img {
+    width: 100%;
+    object-fit: contain;
+    margin: 1.25rem 0;
+    border-radius: 5px;
+}
+
+.van-view .van-type {
+    align-self: flex-start;
+    padding: 0.35rem 1.25em;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--vanSelectedText);
+}
+
+.van-view .name {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0.5rem 0 0.25rem;
+    word-break: break-word;
+}
+
+.van-view .price {
+    font-size: 20px;
+    margin: 0.3rem 0;
+}
+
+.van-view .description {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.van-view .van-link {
+    color: var(--btnRentText);
+    text-decoration: none;
+
+}
+
+.btn-box button {
+    width: 100%;
+    margin: 1rem 0 0;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btnRentBg);
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-box button:hover {
+    background-color: var(--btnRentBgHover);
+    cursor: pointer;
+}
+
+.btn-box button:active {
+    transform: scale(0.98);
+}
+
+
+@media screen and (min-width:500px) {
+
+    main .van-view {
+        max-width: 70%;
+    }
+
+    .van-view .vans-link {
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    .van-view .name {
+        font-size: 32px;
+    }
+
+    .van-view .price {
+        font-size: 21px;
+    }
+
+    .van-view .description {
+        font-size: 19px;
+    }
+
+}
+
+
+@media screen and (min-width:650px) {
+
+    .van-view .btn-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin: 1rem 0 0;        
+    }
+
+    .btn-box button {
+        flex: 1fr;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        margin: initial;
+    }
+
+}

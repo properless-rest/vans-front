@@ -1,0 +1,19 @@
+
+
+.myvans-grid .add-van {
+    min-height: 85px;
+}
+
+.add-van .text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.host-van .add {
+    transform: scale(1.5);
+    transition: transform 0.2s;
+}
+
+.host-van .add:hover {
+    transform: scale(1.8);
+}

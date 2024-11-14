@@ -1,0 +1,191 @@
+
+
+.host-layout .van-update {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* don't set more specific than inside .van-update */
+
+.van-update button {
+    padding: 10px 20px;
+    color: var(--btnVanEditAction);
+    background-color: var(--btnVanEditActionBg);
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.van-update button:hover {
+    background-color: var(--btnVanEditActionBgHover);
+    cursor: pointer;
+}
+
+.van-update button:active {
+    transform: scale(0.98);
+}
+
+.van-update button:disabled {
+    background-color: var(--btnVanEditActionBgDisabled);
+    transform: scale(1);
+
+}
+
+
+.van-update .message-placeholder,
+.van-update .form-message {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    text-align: center;
+    align-self: center;
+}
+
+/* don't set more specific than inside .van-update */
+
+
+.van-update .title {
+    text-align: center;
+}
+
+.van-update .box-with-forms {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 1rem;
+}
+
+.box-with-forms .van-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-with-forms .image-form {}
+
+.image-form .van-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.image-form .van-file-uploader {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0 0.75rem;
+    gap: 0.75rem;
+}
+
+.van-file-uploader .false-input {
+    width: 240px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background-color: var(--falseSelectFileBg);
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.2s;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.van-file-uploader .false-input:hover {
+    background-color: var(--falseSelectFileBgHover);
+    cursor: pointer;
+}
+
+.van-file-uploader .false-input:active {
+    transform: scale(0.98);
+}
+
+.van-file-uploader .false-filename {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.image-form .btn-submit {
+    margin: 0 auto;
+}
+
+.van-update .data-form {}
+
+.data-form .first-input{
+    border-radius: 6px 6px 0 0;
+}
+
+.data-form .van-input,
+.data-form .van-textarea,
+.data-form .van-select {
+    padding: 0.5rem;
+    font-size: 17px;
+    background-color: var(--VanEditFormInputBg);
+    border: 1px solid var(--VanEditFormBorder);
+}
+
+
+.data-form .van-textarea {
+    resize: none; /* Disable resizing */
+    font-family: inherit;
+    text-align: justify;
+}
+
+.data-form .van-select {
+    border-radius: 0 0 6px 6px;
+}
+
+.data-form .btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.btn-box button {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+}
+
+.btn-box .btn-reset {
+    background-color: var(--VanEditDataResetBg);
+}
+
+
+.btn-box .btn-reset:hover {
+    background-color: var(--VanEditDataResetHoverBg);
+}
+
+
+@media screen and (min-width: 400px) {
+
+    /* don't set more specific than inside .host-layout */
+    .van-update .message-placeholder,
+    .van-update .form-message {
+        font-size: 1.2rem;
+    }
+    /* don't set more specific than inside .host-layout */
+    
+    .data-form .van-input,
+    .data-form .van-textarea,
+    .data-form .van-select {
+        padding: 0.75rem;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+    
+    .van-update .box-with-forms {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .data-form .message-placeholder,
+    .data-form .form-message {
+        min-width: 300px;
+        padding: initial;
+        padding-bottom: 0.2rem;
+    }
+
+}
