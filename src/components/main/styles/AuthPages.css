@@ -18,6 +18,9 @@ main .auth-page {
 }
 
 .auth-page .err {
+    background-color: red;
+    width: 90%;
+    text-align: center;
     animation: manifest 8s linear forwards;
 }
 
