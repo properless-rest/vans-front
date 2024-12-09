@@ -306,7 +306,7 @@ async function deleteVan(body) {
         const responce = await fetch(
             fetchURL, 
             { 
-                method: "POST",        
+                method: "DELETE",        
                 headers: { "Content-Type": "application/json", "Authorization": `Bearer ${localStorage.getItem("JWToken")}` }, 
                 body: JSON.stringify(body)
             }

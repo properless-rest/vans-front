@@ -64,6 +64,7 @@ export default function RegisterPage() {
             }
             <Form method="post" className="auth-form" replace>
                 <input
+                    className={actionData?.nameErr ? "wrong-input" : ""}
                     name="name"
                     type="text"
                     placeholder="First Name"
@@ -71,6 +72,7 @@ export default function RegisterPage() {
                     
                 />
                 <input
+                    className={actionData?.surnameErr ? "wrong-input" : ""}
                     name="surname"
                     type="text"
                     placeholder="Last Name"
@@ -105,5 +107,3 @@ export default function RegisterPage() {
         </section>
     )
 }
-
-const errorStyle = { padding:"0.5rem 0", fontStyle: "italic", fontWeight:"bold", color: "red" }

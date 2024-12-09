@@ -1,7 +1,7 @@
 
 
 main .van-view {
-    width: 100vw;
+    width: 100dvw;
     display: flex;
     flex-direction: column;
     padding: 1rem;

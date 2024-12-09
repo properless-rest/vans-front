@@ -1,8 +1,7 @@
 
 .page-layout {
   max-width: var(--appWidth);
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -41,8 +40,8 @@ nav .navlink-div {
   position: fixed; /* fixed position blocks long pages (with y-overflow) entirely */
   top: -100%; /* initially invisible */
   left: 0;
-  height: 100svh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
   /* display: comes from Header.jsx; */
   flex-direction: column;
   justify-content: center;

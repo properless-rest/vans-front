@@ -1,7 +1,7 @@
 
 
 main .home-page {
-    width: 100vw;
+    width: 100dvw;
     display: flex;
     flex-direction: column;
     justify-content: center;

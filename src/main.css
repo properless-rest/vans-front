@@ -152,7 +152,7 @@ html {
 
 body {
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--bodyBg);
 }
 
@@ -172,6 +172,13 @@ a {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+
+/* used to disable scrolling on mobile devices when the pop-down menu is opened */
+body.no-scroll {
+  overflow-y: hidden;
+}
+
 
 /* is used in Vans, Van and hostVan pages */
 

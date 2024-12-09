@@ -9,10 +9,16 @@ import hamburgerSVG from "/svg/hamburger-menu.svg"
 export default function Header({ JWToken, user }) {
 
     function switchMenuState() {
+        if (document.body.classList.contains("no-scroll")) {
+            document.body.classList.remove("no-scroll")
+        } else {
+            document.body.classList.add("no-scroll")
+        }
         setMenuIsOpen( currentState => !currentState )
     }
 
     function handleScreenResize() {
+        document.body.classList.remove("no-scroll")
         const currentWidth = window.innerWidth
         if (currentWidth >= 600 && !menuIsOpen) {
             // note: order of the state setters is important
@@ -27,6 +33,7 @@ export default function Header({ JWToken, user }) {
     }
 
     function closePopUpNavOnReroute() {
+        document.body.classList.remove("no-scroll")
         // closes pop-up with NavLinks for displays with screenidth < 600
         const currentWidth = window.innerWidth
         if (currentWidth < 600) {

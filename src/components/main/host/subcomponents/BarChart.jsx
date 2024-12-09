@@ -27,7 +27,7 @@ export default function TransactionsChart({ data, xKey }) {
                     padding={{ top: 10 }} 
                 />
                 <Tooltip />
-                <Bar unit="$" dataKey="income" fill="#FF974B" />
+                <Bar unit="$" dataKey="income" fill="#FF974B" maxBarSize={50} radius={4} />
             </BarChart>
         </ResponsiveContainer>
     )

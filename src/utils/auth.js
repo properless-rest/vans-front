@@ -20,8 +20,10 @@ async function authorizeUser(action, requestBody) {
             const data = await res.json()
             throw { 
                 message: data.message,
-                emailErr: data.emailErr,  // used for styling in auth forms
-                pwErr: data.pwErr         // used for styling in auth forms
+                emailErr: data.emailErr,    // used for styling in auth forms
+                pwErr: data.pwErr,          // used for styling in auth forms
+                nameErr: data.nameErr,      // used for styling in auth forms
+                surnameErr: data.surnameErr // used for styling in auth forms
             }
         }
         const data = await res.json()

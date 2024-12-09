@@ -1,6 +1,6 @@
 
 main .host-layout {
-    width: 100vw;
+    width: 100dvw;
     display: flex;
     flex-direction: column;
     color: var(--hostPagesText);

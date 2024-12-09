@@ -11,6 +11,7 @@ export default function VanPageView() {
     const location = useLocation()
     const search = location.state?.search || ""
     const vanFilter = location.state?.type || "all"
+    console.log(van.image)
     return (
         <section className="van-view">
             <Link to={`..${search}`} relative="path" className="vans-link">&larr; Back to {vanFilter} Vans</Link>

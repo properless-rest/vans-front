@@ -52,7 +52,7 @@ export default function HostVanDeletePage() {
             <h5 className="message-placeholder" style={{ visibility: "hidden" }}>X</h5>
             }
             <div className="btn-container">
-                <Form method="POST">
+                <Form method="DELETE">
                 <input className="van-input" hidden readOnly required type="text" name="vanUUID" defaultValue={van.uuid} />
                 <button className="btn-delete" type="submit"
                     // onClick={handleSubmit}
